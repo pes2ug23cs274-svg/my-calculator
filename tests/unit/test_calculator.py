@@ -3,7 +3,7 @@ Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
 import pytest
-from src.calculator import add, divide, subtract, multiply
+from src.calculator import add, divide, subtract, multiply, power, square_root
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
@@ -28,6 +28,16 @@ class TestBasicOperations:
         """Test subtracting negative numbers"""
         assert subtract(-1, -1) == 0
         assert subtract(-5, -3) == -2
+    
+    def test_power_operations(self):
+        """Test power operations"""
+        assert power(2, 3) == 8
+        assert power(5, 2) == 25
+
+    def test_square_root_operations(self):
+        """Test square root operations"""
+        assert square_root(4) == 2
+        assert square_root(9) == 3
 
 
 #class TestMultiplyDivideWithValidation:
